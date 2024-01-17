@@ -53,10 +53,11 @@ ds = xr.open_dataset(test_data_path)
 
 * To gather multiple files stored within a zip archive (using the `reference.zip` file as an example):
 ```python
-import pooch
 from pathlib import Path
-import xarray as xr
 from zipfile import ZipFile
+
+import pooch
+import xarray as xr
 
 GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
 BRANCH_OR_COMMIT_HASH = "main"
