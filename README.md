@@ -66,7 +66,7 @@ test_data_path = pooch.retrieve(
     known_hash="md5:192544f3a081375a81d423e08038d32a",
 )
 
-directory_to_extract_to = Path(test_data_path).parent
+directory_to_extract_to = Path(test_data_path).parent  # Extract to the same directory as the zip file
 with ZipFile(test_data_path, 'r') as zip_ref:
     zip_ref.extractall(directory_to_extract_to)
     files = zip_ref.namelist()
