@@ -82,8 +82,9 @@ ds = xr.open_mfdataset(files, combine="nested", concat_dim="platform")
 
 ### Files
 
-| File | Size | Checksum |
-| ---- | ---- | -------- |
+| File                                                | Size | Checksum |
+|-----------------------------------------------------| ---- | -------- |
 | data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc | 730.1 kiB | 0ac83a4ee9dceecda68ac1ee542f50de |
-| data/cc_indicators/reference.zip | 23.7 kiB | 192544f3a081375a81d423e08038d32a |
-| data/cc_indicators/deltas.zip | 1.6 MiB | ce6371e073e5324f9ade385c1c03e7eb |
+| data/cc_indicators/reference.zip                    | 23.7 kiB | 192544f3a081375a81d423e08038d32a |
+| data/cc_indicators/deltas.zip                       | 1.6 MiB | ce6371e073e5324f9ade385c1c03e7eb |
+| data/optimal_interpolation/OI_data.zip              | 2.9 MiB | 1ab72270023366d0410eb6972d1e2656 |
