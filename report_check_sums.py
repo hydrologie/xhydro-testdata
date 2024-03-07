@@ -63,9 +63,12 @@ def main(dry_run: bool = False, readme: Union[str, Path] = "README.md"):
     cwd = Path(".")
     files: list[Path] = filter(valid, cwd.rglob("**/*"))
 
-    file_checksums = dict()
+    file_checksums_tmp = dict()
     for file in files:
-        file_checksums[file] = file_md5_checksum(file)
+        file_checksums_tmp[file] = file_md5_checksum(file)
+
+    # Sort the dictionary by key
+    file_checksums = dict(sorted(file_checksums_tmp.items()))
 
     # Write the checksums dictionary to the bottom of the README.md file, replacing the existing table
     readme = Path(readme)
