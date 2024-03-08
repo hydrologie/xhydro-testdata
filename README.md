@@ -100,7 +100,7 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 | data/cc_indicators/reference.zip | 23.7 kiB | 192544f3a081375a81d423e08038d32a |
 | data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc | 730.1 kiB | 0ac83a4ee9dceecda68ac1ee542f50de |
 | data/cc_indicators/deltas.zip | 1.6 MiB | ce6371e073e5324f9ade385c1c03e7eb |
-| data/LSTM_data/LSTM_test_data_local.nc | 118.9 kiB | 2f7e4eb4eba930121c7995d202fb6313 |
-| data/LSTM_data/LSTM_test_data.nc | 325.7 kiB | ad967971b63d0d4e285b5ae822831ade |
+| data/LSTM_data/LSTM_test_data_local.nc | 118.0 kiB | 2abfe4dd0287a43c1ab40372f4fc4de8 |
+| data/LSTM_data/LSTM_test_data.nc | 325.1 kiB | e7f1ddba0cf3dc3c5c6aa28a0c504fa2 |
 | data/optimal_interpolation/OI_data.zip | 2.9 MiB | 1ab72270023366d0410eb6972d1e2656 |
 | data/optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | acdf90b78b53595eb97ff0e84fc07aa8 |
