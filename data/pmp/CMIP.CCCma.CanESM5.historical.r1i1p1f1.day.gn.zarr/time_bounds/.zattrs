@@ -1,9 +1,0 @@
-{
-    "_ARRAY_DIMENSIONS": [
-        "time",
-        "bnds"
-    ],
-    "calendar": "noleap",
-    "coordinates": "height",
-    "units": "days since 2010-01-01 00:00:00.000000"
-}
