@@ -1,0 +1,10 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "plev"
+    ],
+    "axis": "Z",
+    "long_name": "pressure",
+    "positive": "down",
+    "standard_name": "air_pressure",
+    "units": "Pa"
+}

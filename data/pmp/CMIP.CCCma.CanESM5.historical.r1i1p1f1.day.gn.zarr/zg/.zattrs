@@ -1,0 +1,16 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time",
+        "plev",
+        "y",
+        "x"
+    ],
+    "cell_measures": "area: areacella",
+    "cell_methods": "time: mean",
+    "comment": "PHI/9.80616, CMIP_table_comment: Geopotential is the sum of the specific gravitational potential energy relative to the geoid and the specific centripetal potential energy. Geopotential height is the geopotential divided by the standard acceleration due to gravity. It is numerically similar to the altitude (or geometric height) and not to the quantity with standard name height, which is relative to the surface.",
+    "coordinates": "height",
+    "long_name": "Geopotential Height",
+    "original_name": "PHI",
+    "standard_name": "geopotential_height",
+    "units": "m"
+}

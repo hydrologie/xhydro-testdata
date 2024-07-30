@@ -1,0 +1,555 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "CCCma_model_hash": "3dedf95315d603326fde4f5340dc0519d80d10c0",
+            "CCCma_parent_runid": "rc3-pictrl",
+            "CCCma_pycmor_hash": "33c30511acc319a98240633965a04ca99c26427e",
+            "CCCma_runid": "rc3.1-his01",
+            "Conventions": "CF-1.7 CMIP-6.2",
+            "YMDH_branch_time_in_child": "1850:01:01:00",
+            "YMDH_branch_time_in_parent": "5201:01:01:00",
+            "activity_id": "CMIP",
+            "branch_method": "Spin-up documentation",
+            "branch_time_in_child": 0.0,
+            "branch_time_in_parent": 1223115.0,
+            "cmor_version": "3.4.0",
+            "contact": "ec.cccma.info-info.ccmac.ec@canada.ca",
+            "creation_date": "2019-05-02T08:01:26Z",
+            "data_specs_version": "01.00.29",
+            "experiment": "all-forcing simulation of the recent past",
+            "experiment_id": "historical",
+            "external_variables": "areacella",
+            "forcing_index": 1,
+            "frequency": "day",
+            "further_info_url": "https://furtherinfo.es-doc.org/CMIP6.CCCma.CanESM5.historical.none.r1i1p1f1",
+            "grid": "T63L49 native atmosphere, T63 Linear Gaussian Grid; 128 x 64 longitude/latitude; 49 levels; top level 1 hPa",
+            "grid_label": "gn",
+            "history": "2019-05-02T08:01:26Z ;rewrote data to be consistent with CMIP for variable hus found in table day.;\nOutput from $runid",
+            "initialization_index": 1,
+            "institution": "Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria, BC V8P 5C2, Canada",
+            "institution_id": "CCCma",
+            "license": "CMIP6 model data produced by The Government of Canada (Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada) is licensed under a Creative Commons Attribution ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https:///pcmdi.llnl.gov/. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.",
+            "mip_era": "CMIP6",
+            "netcdf_tracking_ids": "hdl:21.14100/d0a84c86-7fb1-4de4-8837-574504c1f536\nhdl:21.14100/7d458152-d2b1-4e29-a4e9-5a16f7f7844f\nhdl:21.14100/280de5e0-94af-4dac-95ca-80eae7b41b6a\nhdl:21.14100/581b7e23-18ff-492e-9d56-48c59f1a384a\nhdl:21.14100/c8c170c0-551b-4503-99a6-6709978bd720\nhdl:21.14100/d20c7105-4133-4767-9125-c9a3ac346acc\nhdl:21.14100/595e0705-4c16-4684-87a0-56fa8533d326\nhdl:21.14100/c745418f-27f8-4684-b89d-102602c6c9fa\nhdl:21.14100/1b77f41e-2721-4678-8e05-b96827b62c55\nhdl:21.14100/de09dafc-3124-431f-9bd5-69a6eaf360ca\nhdl:21.14100/2d172cbc-3a2e-4a0b-be3d-1b0ca5482f23\nhdl:21.14100/799602d2-4cd8-4cbd-8bbd-10906a9d4698\nhdl:21.14100/88ef9d3a-3177-4347-ad01-ef09694d3fd9\nhdl:21.14100/94caa375-080b-4844-b134-573495320fa0\nhdl:21.14100/4fcf8656-f50d-4f85-95b5-aa079ea4f5f3\nhdl:21.14100/2e47d6fe-22f6-4b47-93af-4b577a51ca29\nhdl:21.14100/15b29d21-c890-4173-8aa3-b6a931aa1d26",
+            "nominal_resolution": "500 km",
+            "parent_activity_id": "CMIP",
+            "parent_experiment_id": "piControl",
+            "parent_mip_era": "CMIP6",
+            "parent_source_id": "CanESM5",
+            "parent_time_units": "days since 1850-01-01 0:0:0.0",
+            "parent_variant_label": "r1i1p1f1",
+            "physics_index": 1,
+            "product": "model-output",
+            "realization_index": 1,
+            "realm": "atmos",
+            "references": "Geophysical Model Development Special issue on CanESM5 (https://www.geosci-model-dev.net/special_issues.html)",
+            "source": "CanESM5 (2019): \naerosol: interactive\natmos: CanAM5 (T63L49 native atmosphere, T63 Linear Gaussian Grid; 128 x 64 longitude/latitude; 49 levels; top level 1 hPa)\natmosChem: specified oxidants for aerosols\nland: CLASS3.6/CTEM1.2\nlandIce: specified ice sheets\nocean: NEMO3.4.1 (ORCA1 tripolar grid, 1 deg with refinement to 1/3 deg within 20 degrees of the equator; 361 x 290 longitude/latitude; 45 vertical levels; top grid cell 0-6.19 m)\nocnBgchem: Canadian Model of Ocean Carbon (CMOC); NPZD ecosystem with OMIP prescribed carbonate chemistry\nseaIce: LIM2",
+            "source_id": "CanESM5",
+            "source_type": "AOGCM",
+            "status": "2019-11-13;created;by nhn2@columbia.edu",
+            "sub_experiment": "none",
+            "sub_experiment_id": "none",
+            "table_id": "day",
+            "table_info": "Creation Date:(20 February 2019) MD5:374fbe5a2bcca535c40f7f23da271e49",
+            "title": "CanESM5 output prepared for CMIP6",
+            "tracking_id": "hdl:21.14100/d0a84c86-7fb1-4de4-8837-574504c1f536\nhdl:21.14100/7d458152-d2b1-4e29-a4e9-5a16f7f7844f\nhdl:21.14100/280de5e0-94af-4dac-95ca-80eae7b41b6a\nhdl:21.14100/581b7e23-18ff-492e-9d56-48c59f1a384a\nhdl:21.14100/c8c170c0-551b-4503-99a6-6709978bd720\nhdl:21.14100/d20c7105-4133-4767-9125-c9a3ac346acc\nhdl:21.14100/595e0705-4c16-4684-87a0-56fa8533d326\nhdl:21.14100/c745418f-27f8-4684-b89d-102602c6c9fa\nhdl:21.14100/1b77f41e-2721-4678-8e05-b96827b62c55\nhdl:21.14100/de09dafc-3124-431f-9bd5-69a6eaf360ca\nhdl:21.14100/2d172cbc-3a2e-4a0b-be3d-1b0ca5482f23\nhdl:21.14100/799602d2-4cd8-4cbd-8bbd-10906a9d4698\nhdl:21.14100/88ef9d3a-3177-4347-ad01-ef09694d3fd9\nhdl:21.14100/94caa375-080b-4844-b134-573495320fa0\nhdl:21.14100/4fcf8656-f50d-4f85-95b5-aa079ea4f5f3\nhdl:21.14100/2e47d6fe-22f6-4b47-93af-4b577a51ca29\nhdl:21.14100/15b29d21-c890-4173-8aa3-b6a931aa1d26",
+            "variable_id": "hus",
+            "variant_label": "r1i1p1f1",
+            "version": "v20190429",
+            "version_id": "v20190429"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "height/.zarray": {
+            "chunks": [],
+            "compressor": null,
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [],
+            "zarr_format": 2
+        },
+        "height/.zattrs": {
+            "_ARRAY_DIMENSIONS": [],
+            "axis": "Z",
+            "long_name": "height",
+            "positive": "up",
+            "standard_name": "height",
+            "units": "m"
+        },
+        "hus/.zarray": {
+            "chunks": [
+                214,
+                8,
+                64,
+                128
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 1.0000000200408773e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                8,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "hus/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "plev",
+                "y",
+                "x"
+            ],
+            "cell_measures": "area: areacella",
+            "cell_methods": "time: mean",
+            "comment": "Specific humidity is the mass fraction of water vapor in (moist) air.",
+            "coordinates": "height",
+            "long_name": "Specific Humidity",
+            "original_name": "SHUM",
+            "standard_name": "specific_humidity",
+            "units": "1"
+        },
+        "lat_bounds/.zarray": {
+            "chunks": [
+                2,
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "lat_bounds/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "y",
+                "bnds"
+            ],
+            "coordinates": "height"
+        },
+        "lon_bounds/.zarray": {
+            "chunks": [
+                2,
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "lon_bounds/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "x",
+                "bnds"
+            ],
+            "coordinates": "height"
+        },
+        "plev/.zarray": {
+            "chunks": [
+                8
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                8
+            ],
+            "zarr_format": 2
+        },
+        "plev/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "plev"
+            ],
+            "axis": "Z",
+            "long_name": "pressure",
+            "positive": "down",
+            "standard_name": "air_pressure",
+            "units": "Pa"
+        },
+        "pr/.zarray": {
+            "chunks": [
+                1825,
+                2,
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "pr/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "y",
+                "x"
+            ],
+            "coordinates": "height"
+        },
+        "prsn/.zarray": {
+            "chunks": [
+                1825,
+                2,
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "prsn/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "y",
+                "x"
+            ],
+            "coordinates": "height"
+        },
+        "rf/.zarray": {
+            "chunks": [
+                1825,
+                2,
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "rf/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "y",
+                "x"
+            ],
+            "coordinates": "height"
+        },
+        "snw/.zarray": {
+            "chunks": [
+                8524,
+                64,
+                128
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 1.0000000200408773e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "snw/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "y",
+                "x"
+            ],
+            "cell_measures": "area: areacella",
+            "cell_methods": "area: mean where land time: mean",
+            "comment": "SNOT(1), binning 4 ISGG saves to one daily save., CMIP_table_comment: The mass of surface snow on the land portion of the grid cell divided by the land area in the grid cell; reported as missing where the land fraction is 0; excludes snow on vegetation canopy or on sea ice.",
+            "coordinates": "height",
+            "history": "bindtwo 2019-06-28T23:33:44Z altered by CMOR: Reordered dimensions, original order: lat lon time. 2019-06-28T23:33:44Z altered by CMOR: replaced missing value flag (1e+38) with standard missing value (1e+20).",
+            "long_name": "Surface Snow Amount",
+            "original_name": "SNOT",
+            "standard_name": "surface_snow_amount",
+            "units": "kg m-2"
+        },
+        "tas/.zarray": {
+            "chunks": [
+                1881,
+                64,
+                128
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 1.0000000200408773e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "tas/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "y",
+                "x"
+            ],
+            "cell_measures": "area: areacella",
+            "cell_methods": "area: time: mean",
+            "comment": "near-surface (usually, 2 meter) air temperature",
+            "coordinates": "height",
+            "history": "2019-05-02T08:02:00Z altered by CMOR: Treated scalar dimension: 'height'. 2019-05-02T08:02:00Z altered by CMOR: Reordered dimensions, original order: lat lon time. 2019-05-02T08:02:00Z altered by CMOR: replaced missing value flag (1e+38) with standard missing value (1e+20).",
+            "long_name": "Near-Surface Air Temperature",
+            "missing_value": 1.0000000200408773e+20,
+            "original_name": "ST",
+            "standard_name": "air_temperature",
+            "units": "K"
+        },
+        "time/.zarray": {
+            "chunks": [
+                30113
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "axis": "T",
+            "bounds": "time_bnds",
+            "calendar": "noleap",
+            "long_name": "time",
+            "standard_name": "time",
+            "units": "days since 1850-01-01T12:00:00"
+        },
+        "time_bounds/.zarray": {
+            "chunks": [
+                1825,
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "time_bounds/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "bnds"
+            ],
+            "calendar": "noleap",
+            "coordinates": "height",
+            "units": "days since 2010-01-01 00:00:00.000000"
+        },
+        "x/.zarray": {
+            "chunks": [
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2
+            ],
+            "zarr_format": 2
+        },
+        "x/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "x"
+            ],
+            "axis": "X",
+            "bounds": "lon_bnds",
+            "long_name": "Longitude",
+            "standard_name": "longitude",
+            "units": "degrees_east"
+        },
+        "y/.zarray": {
+            "chunks": [
+                2
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                2
+            ],
+            "zarr_format": 2
+        },
+        "y/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "y"
+            ],
+            "axis": "Y",
+            "bounds": "lat_bnds",
+            "long_name": "Latitude",
+            "standard_name": "latitude",
+            "units": "degrees_north"
+        },
+        "zg/.zarray": {
+            "chunks": [
+                239,
+                8,
+                64,
+                128
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 1.0000000200408773e+20,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1825,
+                8,
+                2,
+                2
+            ],
+            "zarr_format": 2
+        },
+        "zg/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "plev",
+                "y",
+                "x"
+            ],
+            "cell_measures": "area: areacella",
+            "cell_methods": "time: mean",
+            "comment": "PHI/9.80616, CMIP_table_comment: Geopotential is the sum of the specific gravitational potential energy relative to the geoid and the specific centripetal potential energy. Geopotential height is the geopotential divided by the standard acceleration due to gravity. It is numerically similar to the altitude (or geometric height) and not to the quantity with standard name height, which is relative to the surface.",
+            "coordinates": "height",
+            "long_name": "Geopotential Height",
+            "original_name": "PHI",
+            "standard_name": "geopotential_height",
+            "units": "m"
+        }
+    },
+    "zarr_consolidated_format": 1
+}
