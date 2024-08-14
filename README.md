@@ -105,6 +105,7 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 | data/LSTM_data/multiple_watersheds.nc | 3.2 MiB | 31e1ae3ffcfd14d6a92faefd3d8bd57a |
 | data/LSTM_data/LSTM_test_data_local.nc | 118.0 kiB | 2abfe4dd0287a43c1ab40372f4fc4de8 |
 | data/LSTM_data/LSTM_test_data.nc | 325.1 kiB | e7f1ddba0cf3dc3c5c6aa28a0c504fa2 |
+| data/extreme_value_analysis/NOAA_GFDL_ESM4.zip | 88.7 kiB | 6c0f51c59add2f37b0e4af169b7eb7f6 |
 | data/extreme_value_analysis/genpareto.zip | 136.0 kiB | ecb74164db4bbfeabfc5e340b11e7ae8 |
 | data/extreme_value_analysis/genextreme.zip | 228.0 kiB | cc2ff7c93949673a6acf00c7c2fac20b |
 | data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc | 730.1 kiB | 0ac83a4ee9dceecda68ac1ee542f50de |
