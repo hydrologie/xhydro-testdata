@@ -39,9 +39,10 @@ repos:
     hooks:
       - id: blackdoc
         additional_dependencies: [ 'black==24.4.2' ]
+      - id: blackdoc-autoupdate-black
   - repo: meta
     hooks:
-#      - id: check-hooks-apply
+      - id: check-hooks-apply
       - id: check-useless-excludes
 
 ci:
