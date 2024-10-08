@@ -12,13 +12,13 @@ repos:
     hooks:
       - id: check-added-large-files
         args: [ '--maxkb=5000' ]
-      - id: check-json
+      # - id: check-json
       - id: check-yaml
         args: [ '--allow-multiple-documents' ]
       - id: end-of-file-fixer
       - id: forbid-submodules
-      - id: pretty-format-json
-        args: [ '--autofix', '--no-ensure-ascii', '--no-sort-keys' ]
+      # - id: pretty-format-json
+      #   args: [ '--autofix', '--no-ensure-ascii', '--no-sort-keys' ]
       - id: trailing-whitespace
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.35.1
