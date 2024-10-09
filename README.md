@@ -103,7 +103,7 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 | data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 942.9 kiB | 191cffe11cacc303db697aa91d9be7ab |
 | data/optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | acdf90b78b53595eb97ff0e84fc07aa8 |
 | data/optimal_interpolation/OI_data.zip | 2.9 MiB | 1ab72270023366d0410eb6972d1e2656 |
-| data/hydro_modelling/ERA5_testdata.nc | 101.0 kiB | 48a8de6aeddd379ac514e81dec9eb98b |
+| data/hydro_modelling/ERA5_testdata.nc | 100.9 kiB | 784db17edf68d9e38c3e9d0aa18297a6 |
 | data/extreme_value_analysis/genpareto.zip | 136.0 kiB | ecb74164db4bbfeabfc5e340b11e7ae8 |
 | data/extreme_value_analysis/genextreme.zip | 228.0 kiB | cc2ff7c93949673a6acf00c7c2fac20b |
 | data/extreme_value_analysis/NOAA_GFDL_ESM4.zip | 88.7 kiB | 6c0f51c59add2f37b0e4af169b7eb7f6 |
