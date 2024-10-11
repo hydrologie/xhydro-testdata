@@ -23,7 +23,7 @@ BRANCH_OR_COMMIT_HASH = "my_development_branch"
 
 test_data_path = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_test_data.nc",
-    known_hash="md5:1234567890abcdef",
+    known_hash="sha256:1234567890abcdef",
 )
 
 # If your testing data is `xarray`-readable, you can then use the following:
@@ -46,7 +46,7 @@ BRANCH_OR_COMMIT_HASH = "main"
 
 test_data_path = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc",
-    known_hash="md5:0ac83a4ee9dceecda68ac1ee542f50de",
+    known_hash="sha256:8699f40153abdea098d580f73b1f8ad64875823f0d8479fdc4f8a40b4adcaf5e",
 )
 ds = xr.open_dataset(test_data_path)
 ```
@@ -81,7 +81,7 @@ BRANCH_OR_COMMIT_HASH = "main"
 
 test_data_path = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/reference.zip",
-    known_hash="md5:192544f3a081375a81d423e08038d32a",
+    known_hash="sha256:80e21de39a78da49f809ddf35bd2d21271828450ea2da71eac08aab13c7b846e",
 )
 
 directory_to_extract_to = Path(test_data_path).parent  # To extract to the same directory as the zip file
@@ -97,19 +97,19 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 
 | File | Size | Checksum |
 | ---- | ---- | -------- |
-| data/ravenpy/ERA5_Riviere_Rouge_global.nc | 150.7 kiB | de985fa27ddceac690aeb34182a93f11 |
-| data/ravenpy/Debit_Riviere_Rouge.nc | 343.5 kiB | 5b0feedc34333244b1d9e9c251323478 |
-| data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.fx.gn.zarr.zip | 10.7 kiB | 1257973a6f6047e6998c3430e3342534 |
-| data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 942.9 kiB | 191cffe11cacc303db697aa91d9be7ab |
-| data/optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | acdf90b78b53595eb97ff0e84fc07aa8 |
-| data/optimal_interpolation/OI_data.zip | 2.9 MiB | 1ab72270023366d0410eb6972d1e2656 |
-| data/LSTM_data/single_watershed.nc | 1.2 MiB | b1dfe4641321f63fb9198e9538fd679b |
-| data/LSTM_data/multiple_watersheds.nc | 3.2 MiB | 31e1ae3ffcfd14d6a92faefd3d8bd57a |
-| data/LSTM_data/LSTM_test_data_local.nc | 118.0 kiB | 2abfe4dd0287a43c1ab40372f4fc4de8 |
-| data/LSTM_data/LSTM_test_data.nc | 325.1 kiB | e7f1ddba0cf3dc3c5c6aa28a0c504fa2 |
-| data/extreme_value_analysis/NOAA_GFDL_ESM4.zip | 88.7 kiB | 6c0f51c59add2f37b0e4af169b7eb7f6 |
-| data/extreme_value_analysis/genpareto.zip | 136.0 kiB | ecb74164db4bbfeabfc5e340b11e7ae8 |
-| data/extreme_value_analysis/genextreme.zip | 228.0 kiB | cc2ff7c93949673a6acf00c7c2fac20b |
-| data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc | 730.1 kiB | 0ac83a4ee9dceecda68ac1ee542f50de |
-| data/cc_indicators/reference.zip | 23.7 kiB | 192544f3a081375a81d423e08038d32a |
-| data/cc_indicators/deltas.zip | 1.6 MiB | ce6371e073e5324f9ade385c1c03e7eb |
+| ravenpy/ERA5_Riviere_Rouge_global.nc | 150.7 kiB | sha256:341ac746130a0d3e3189d3a41dc8528d6bd22869a519b68e134959407ad200a3 |
+| ravenpy/Debit_Riviere_Rouge.nc | 343.5 kiB | sha256:d0a27de5eb3cb466e60669d894296bcbc4e9f590edc1ae2490685babd10b2d22 |
+| pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.fx.gn.zarr.zip | 10.7 kiB | sha256:14d5b71b4b61eaa8bf0ff7cbfff5fd8a33e3efc2e6a239ecbe91bf253ed56c9b |
+| pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 942.9 kiB | sha256:ca4d4f18385c55b4191c445d8bae1c105c3112cd6eeb59f9f3214a83eb19b14d |
+| optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | sha256:48ee08325bd35c6bce5c0e52e3ee25df27c830720929060f607fb0417c476941 |
+| optimal_interpolation/OI_data.zip | 2.9 MiB | sha256:9cd881a19fc82bda560e636d3f6a2c40718b82f5bce1e31aedce6d1b2e41d7d8 |
+| extreme_value_analysis/genpareto.zip | 136.0 kiB | sha256:f6b67160dd1373ad6a9ce511788184a0bbed23e0c297315d1686ecbb88e16e0a |
+| extreme_value_analysis/genextreme.zip | 228.0 kiB | sha256:8d036acca8b9a4608930c97d6cebfbf24205a20c7e43c47dcbdc14221a643b0c |
+| extreme_value_analysis/NOAA_GFDL_ESM4.zip | 88.7 kiB | sha256:483a5ffd398aa60db2d2c6d41857cd02c201a7f9efcacef2610a2521f72a22b6 |
+| cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc | 730.1 kiB | sha256:8699f40153abdea098d580f73b1f8ad64875823f0d8479fdc4f8a40b4adcaf5e |
+| cc_indicators/reference.zip | 23.7 kiB | sha256:80e21de39a78da49f809ddf35bd2d21271828450ea2da71eac08aab13c7b846e |
+| cc_indicators/deltas.zip | 1.6 MiB | sha256:d6bff404c7e1514d819db9e46c69a3756a0a5f847586fc2fa4e573de3ee1d355 |
+| LSTM_data/single_watershed.nc | 1.2 MiB | sha256:bea90106d540a7b8b6aca4013ae6c2a9f202a37620f9f265fe3d7c70bf9ff7c8 |
+| LSTM_data/multiple_watersheds.nc | 3.2 MiB | sha256:acc5a9821fefbd85cda5283cdfdc00c9290662b5ff6f83ac5637ae84f730c427 |
+| LSTM_data/LSTM_test_data_local.nc | 118.0 kiB | sha256:4e4a70efd9405b481556c73f700dd87d0bf2169366a89b14cd8d8f771f093da8 |
+| LSTM_data/LSTM_test_data.nc | 325.1 kiB | sha256:fcac6067708cbdc7e4df6d05471e89ce562bfe8720f0324f113d17fa9d1fe87b |
