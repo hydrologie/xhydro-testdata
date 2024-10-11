@@ -46,7 +46,7 @@ BRANCH_OR_COMMIT_HASH = "main"
 
 test_data_path = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc",
-    known_hash="sha256:0ac83a4ee9dceecda68ac1ee542f50de",
+    known_hash="sha256:8699f40153abdea098d580f73b1f8ad64875823f0d8479fdc4f8a40b4adcaf5e",
 )
 ds = xr.open_dataset(test_data_path)
 ```
