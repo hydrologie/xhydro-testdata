@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import hashlib
 import math
-import os
 from pathlib import Path
 from typing import Union
 
@@ -26,7 +25,7 @@ def file_size_formatter(i: int, binary: bool = True, precision: int = 1) -> str:
 
 
 def file_sha256_checksum(filename: Path) -> str:
-    """Return md5 checksum for file."""
+    """Return sha256 checksum for file."""
     hash_sha256 = hashlib.sha256()
     with filename.open("rb") as f:
         hash_sha256.update(f.read())
@@ -34,7 +33,7 @@ def file_sha256_checksum(filename: Path) -> str:
 
 
 def valid(path: Path) -> bool:
-    """Return True if path should be considered for the creation of md5 checksum.
+    """Return True if path should be considered for the creation of sha256 checksum.
 
     Parameters
     ----------
@@ -61,7 +60,7 @@ def valid(path: Path) -> bool:
 def main(dry_run: bool = False, readme: Union[str, Path] = "README.md"):
     """Create checksum files."""
     data_folder = Path(".").joinpath("data")
-    files = filter(valid, data_folder.rglob("**/*"))
+    files = list(filter(valid, data_folder.rglob("**/*")))
 
     file_checksums_tmp = dict()
     for file in files:
@@ -112,14 +111,17 @@ def main(dry_run: bool = False, readme: Union[str, Path] = "README.md"):
     if lines[-1].startswith("\n"):
         del lines[-1]
 
-    if dry_run:
-        print("Dry run. Not writing to README.md file.")
-    else:
-        with readme.open("w") as f:
-            f.writelines(lines)
+    with readme.open("w", encoding="utf-8") as r:
+        r.writelines(lines)
     print(f"Successfully wrote {len(file_checksums)} checksums to {readme}.")
+
+    # Update the data registry file
+    registry = Path("data/registry.txt")
+    with registry.open("w", encoding="utf-8") as out:
+        for file, checksum in file_checksums.items():
+            out.write(f"{file.relative_to(data_folder).as_posix()} sha256:{checksum}\n")
+    print(f"Successfully wrote {len(file_checksums)} checksums to {registry}.")
 
 
 if __name__ == "__main__":
-    args = os.getenv("DRY_RUN", False)
-    main(args)
+    main()
