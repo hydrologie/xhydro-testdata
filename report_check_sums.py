@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import hashlib
 import math
-import os
 from pathlib import Path
 from typing import Union
 
@@ -25,21 +24,21 @@ def file_size_formatter(i: int, binary: bool = True, precision: int = 1) -> str:
     return f"{value:.{precision}f} {suffix}"
 
 
-def file_md5_checksum(filename: Path) -> str:
-    """Return md5 checksum for file."""
-    hash_md5 = hashlib.md5()
+def file_sha256_checksum(filename: Path) -> str:
+    """Return sha256 checksum for file."""
+    hash_sha256 = hashlib.sha256()
     with filename.open("rb") as f:
-        hash_md5.update(f.read())
-    return hash_md5.hexdigest()
+        hash_sha256.update(f.read())
+    return hash_sha256.hexdigest()
 
 
 def valid(path: Path) -> bool:
-    """Return True if path should be considered for the creation of md5 checksum.
+    """Return True if path should be considered for the creation of sha256 checksum.
 
     Parameters
     ----------
     path : Path
-      Path object.
+        The path to the file.
     """
 
     # Exclude top-level files
@@ -50,8 +49,8 @@ def valid(path: Path) -> bool:
     if any([p.startswith(".") for p in path.parts]):
         return False
 
-    # Exclude md5 files
-    if path.suffix == ".md5":
+    # Exclude the registry
+    if path.name == "registry.txt":
         return False
 
     if path.is_file():
@@ -60,12 +59,13 @@ def valid(path: Path) -> bool:
 
 def main(dry_run: bool = False, readme: Union[str, Path] = "README.md"):
     """Create checksum files."""
-    cwd = Path(".")
-    files: list[Path] = filter(valid, cwd.rglob("**/*"))
+    data_folder = Path(".").joinpath("data")
+    files = list(filter(valid, data_folder.rglob("**/*")))
 
     file_checksums_tmp = dict()
     for file in files:
-        file_checksums_tmp[file] = file_md5_checksum(file)
+        if valid(file):
+            file_checksums_tmp[file] = file_sha256_checksum(file)
 
     # Sort the dictionary by key
     file_checksums = dict(sorted(file_checksums_tmp.items()))
@@ -85,9 +85,12 @@ def main(dry_run: bool = False, readme: Union[str, Path] = "README.md"):
     if start_index is not None:
         del lines[start_index:]
 
+    i = None
     for i, line in enumerate(lines):
         if line.startswith("## Available datasets"):
             break
+    if not i:
+        raise ValueError("Could not find '## Available datasets' in README.md")
 
     # Insert new checksum table
     lines.insert(i + 1, "\n")
@@ -99,23 +102,26 @@ def main(dry_run: bool = False, readme: Union[str, Path] = "README.md"):
     for file, checksum in file_checksums.items():
         lines.insert(
             i + 6,
-            f"| {file.relative_to(cwd).as_posix()} "
+            f"| {file.relative_to(data_folder).as_posix()} "
             f"| {file_size_formatter(file.stat().st_size)} "
-            f"| {checksum} |\n",
+            f"| sha256:{checksum} |\n",
         )
 
     # Remove trailing newline
     if lines[-1].startswith("\n"):
         del lines[-1]
 
-    if dry_run:
-        print("Dry run. Not writing to README.md file.")
-    else:
-        with readme.open("w") as f:
-            f.writelines(lines)
+    with readme.open("w", encoding="utf-8") as r:
+        r.writelines(lines)
     print(f"Successfully wrote {len(file_checksums)} checksums to {readme}.")
+
+    # Update the data registry file
+    registry = Path("data/registry.txt")
+    with registry.open("w", encoding="utf-8") as out:
+        for file, checksum in file_checksums.items():
+            out.write(f"{file.relative_to(data_folder).as_posix()} sha256:{checksum}\n")
+    print(f"Successfully wrote {len(file_checksums)} checksums to {registry}.")
 
 
 if __name__ == "__main__":
-    args = os.getenv("DRY_RUN", False)
-    main(args)
+    main()
