@@ -103,6 +103,7 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 | pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 942.9 kiB | sha256:ca4d4f18385c55b4191c445d8bae1c105c3112cd6eeb59f9f3214a83eb19b14d |
 | optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | sha256:48ee08325bd35c6bce5c0e52e3ee25df27c830720929060f607fb0417c476941 |
 | optimal_interpolation/OI_data.zip | 2.9 MiB | sha256:9cd881a19fc82bda560e636d3f6a2c40718b82f5bce1e31aedce6d1b2e41d7d8 |
+| hydro_modelling/ERA5_testdata.nc | 100.9 kiB | sha256:7051f696f30d9772511cfbae81a0be0bd2898f25d123227f5f5fa4869138fa4e |
 | extreme_value_analysis/genpareto.zip | 136.0 kiB | sha256:f6b67160dd1373ad6a9ce511788184a0bbed23e0c297315d1686ecbb88e16e0a |
 | extreme_value_analysis/genextreme.zip | 228.0 kiB | sha256:8d036acca8b9a4608930c97d6cebfbf24205a20c7e43c47dcbdc14221a643b0c |
 | extreme_value_analysis/NOAA_GFDL_ESM4.zip | 88.7 kiB | sha256:483a5ffd398aa60db2d2c6d41857cd02c201a7f9efcacef2610a2521f72a22b6 |
