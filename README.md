@@ -99,8 +99,8 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 | ---- | ---- | -------- |
 | data/ravenpy/ERA5_Riviere_Rouge_global.nc | 150.7 kiB | de985fa27ddceac690aeb34182a93f11 |
 | data/ravenpy/Debit_Riviere_Rouge.nc | 343.5 kiB | 5b0feedc34333244b1d9e9c251323478 |
-| data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.fx.gn.zarr.zip | 10.7 kiB | 1257973a6f6047e6998c3430e3342534 |
-| data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 942.9 kiB | 191cffe11cacc303db697aa91d9be7ab |
+| data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.fx.gn.zarr.zip | 12.7 kiB | 54646d8739034a5d85e8260e8390cadd |
+| data/pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 758.5 kiB | 83b4c15cd8105b0d72b16185a062ce36 |
 | data/optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | acdf90b78b53595eb97ff0e84fc07aa8 |
 | data/optimal_interpolation/OI_data.zip | 2.9 MiB | 1ab72270023366d0410eb6972d1e2656 |
 | data/LSTM_data/single_watershed.nc | 1.2 MiB | b1dfe4641321f63fb9198e9538fd679b |
