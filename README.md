@@ -97,7 +97,7 @@ with ZipFile(test_data_path, 'r') as zip_ref:
 
 | File | Size | Checksum |
 | ---- | ---- | -------- |
-| use_case/qsim.zip | 4.5 MiB | sha256:69ca129cf48554a9e9252970379a8d7af8113c9ad39877cb5f14ad0c2d79d9a0 |
+| use_case/deltas.zip | 57.9 kiB | sha256:70eb2da69550c1b839749cb5552bcd7b44196ff4d8ab7951c2e5254638a7b598 |
 | ravenpy/ERA5_Riviere_Rouge_global.nc | 150.7 kiB | sha256:341ac746130a0d3e3189d3a41dc8528d6bd22869a519b68e134959407ad200a3 |
 | ravenpy/Debit_Riviere_Rouge.nc | 343.5 kiB | sha256:d0a27de5eb3cb466e60669d894296bcbc4e9f590edc1ae2490685babd10b2d22 |
 | pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.fx.gn.zarr.zip | 12.7 kiB | sha256:dc7c92fc098ca5adf43e76b25e3f79b70815ed961e945952983bb68b3c380cf1 |
