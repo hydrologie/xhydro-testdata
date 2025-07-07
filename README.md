@@ -62,7 +62,7 @@ BRANCH_OR_COMMIT_HASH = "main"
 files = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/reference.zip",
     known_hash="md5:192544f3a081375a81d423e08038d32a",
-    processor=pooch.Unzip()
+    processor=pooch.Unzip(),
 )
 
 # Exactly how you open the files depends on the structure of the data. This will work for the reference.zip file:
@@ -84,8 +84,10 @@ test_data_path = pooch.retrieve(
     known_hash="sha256:80e21de39a78da49f809ddf35bd2d21271828450ea2da71eac08aab13c7b846e",
 )
 
-directory_to_extract_to = Path(test_data_path).parent  # To extract to the same directory as the zip file
-with ZipFile(test_data_path, 'r') as zip_ref:
+directory_to_extract_to = Path(
+    test_data_path
+).parent  # To extract to the same directory as the zip file
+with ZipFile(test_data_path, "r") as zip_ref:
     zip_ref.extractall(directory_to_extract_to)
     files = zip_ref.namelist()
 ```
