@@ -105,6 +105,9 @@ with ZipFile(test_data_path, "r") as zip_ref:
 | ravenpy/Debit_Riviere_Rouge.nc | 343.5 kiB | sha256:d0a27de5eb3cb466e60669d894296bcbc4e9f590edc1ae2490685babd10b2d22 |
 | pygmet/subset_oi_tp.nc | 21.4 kiB | sha256:1cddcb439168891e4ad025c7708c6d0ce1017bbb013ac2fe46589dc3fb5953da |
 | pygmet/subset_grid_temperature.nc | 25.1 kiB | sha256:66a3086d9aaacbedac6633050380b9b7685407c952a3f8629a16caea4d1ef8db |
+| precip_oi/stations_flags_clean_subset.nc | 70.0 kiB | sha256:03513b859e6c99ab02728f49b0e3e7382375e7311c68e33c8d59d6f734eb08d1 |
+| precip_oi/ERA5_land_3_variables_raw_subset.nc | 3.8 MiB | sha256:09ee75f73bb4e88bddb6c9184245766ebe8cc6b13b58ef58a4754e523138ff1f |
+| precip_oi/ERA5Land_with_OI_flags_validation_subset.nc | 2.5 MiB | sha256:50fc8d562443efe82998735c50268019532493bc02b47e4a47f6672708c87b5f |
 | pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.fx.gn.zarr.zip | 12.7 kiB | sha256:dc7c92fc098ca5adf43e76b25e3f79b70815ed961e945952983bb68b3c380cf1 |
 | pmp/CMIP.CCCma.CanESM5.historical.r1i1p1f1.day.gn.zarr.zip | 758.5 kiB | sha256:d5775b2f09381f2f3a7cc06af76f62fb216b60252aab3a602280a513554d59ad |
 | optimal_interpolation/OI_data_corrected.zip | 3.2 MiB | sha256:48ee08325bd35c6bce5c0e52e3ee25df27c830720929060f607fb0417c476941 |
