@@ -21,9 +21,9 @@ In order to add a new dataset to the `xHydro`/`xDatasets` testing data, please e
 ```python
 from xhydro.testing.helpers import deveraux
 
-test_data_path = deveraux(
-    branch="main" # or "my_development_branch"
-).fetch("my_subfolder/my_test_data.nc")
+test_data_path = deveraux(branch="main").fetch(  # or "my_development_branch"
+    "my_subfolder/my_test_data.nc"
+)
 
 # If your testing data is `xarray`-readable, you can then use the following:
 import xarray as xr
