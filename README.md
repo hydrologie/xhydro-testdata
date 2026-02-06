@@ -22,8 +22,8 @@ In order to add a new dataset to the `xHydro`/`xDatasets` testing data, please e
 from xhydro.testing.helpers import deveraux
 
 test_data_path = deveraux(
-    branch="my_development_branch"  # The default branch is "main", but you can specify a different branch if you wish
-).fetch("data/my_subfolder/my_test_data.nc")
+    branch="main" # or "my_development_branch"
+).fetch("my_subfolder/my_test_data.nc")
 
 # If your testing data is `xarray`-readable, you can then use the following:
 import xarray as xr
@@ -37,7 +37,7 @@ from xhydro.testing.helpers import deveraux
 import pooch
 
 files = deveraux().fetch(
-    "data/my_subfolder/my_test_data.zip",
+    "my_subfolder/my_test_data.zip",
     processor=pooch.Unzip(),
 )
 
@@ -56,7 +56,7 @@ GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
 BRANCH_OR_COMMIT_HASH = "my_development_branch"
 
 test_data_path = pooch.retrieve(
-    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_test_data.nc",
+    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_subfolder/my_test_data.nc",
     known_hash="sha256:1234567890abcdef",
 )
 ```
