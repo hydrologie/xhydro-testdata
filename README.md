@@ -53,7 +53,7 @@ The above procedure is the recommended way to load data from this repository, bu
 import pooch
 
 GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
-BRANCH_OR_COMMIT_HASH = "main" # or "my_development_branch"
+BRANCH_OR_COMMIT_HASH = "main"  # or "my_development_branch"
 
 test_data_path = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_subfolder/my_test_data.nc",
@@ -66,7 +66,7 @@ test_data_path = pooch.retrieve(
 import pooch
 
 GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
-BRANCH_OR_COMMIT_HASH = "main" # or "my_development_branch"
+BRANCH_OR_COMMIT_HASH = "main"  # or "my_development_branch"
 
 files = pooch.retrieve(
     url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_subfolder/my_test_data.zip",
