@@ -8,22 +8,21 @@ In order to add a new dataset to the `xHydro`/`xDatasets` testing data, please e
 
 1. Create a new branch: `git checkout -b my_new_testdata_branch`
 2. Place your dataset within an appropriate subdirectory (or create a new one: `mkdir data`).
-3. Run the md5 checksum generation script: `python report_check_sums.py`
+3. Run the md5 checksum generation script: `python report_check_sums.py`. This will update the `data/registry.txt` file with the new dataset and its checksum.
 4. Commit your changes: `git add * && git commit -m "added my_new_testdata"`
 5. Open a Pull Request.
+6. Once the Pull Request has been merged, create a new release and tag it with the current date (e.g. `v2026-02-04`).
+7. In `xHydro` itself, change the `default_testdata_version` variable to the new release tag (e.g. `v2026-02-04`) in `xhydro/testing/helpers.py`.
+8. Overwrite the entries in `xhydro/testing/registry.txt` file with the new entries from this repository's `data/registry.txt` file.
 
-If you wish to perform preliminary tests against the dataset on a particular branch/commit, this can be done with the following procedure:
+## Loading data with `xHydro`
 
 * To gather a single file:
 ```python
-import pooch
+from xhydro.testing.helpers import deveraux
 
-GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
-BRANCH_OR_COMMIT_HASH = "my_development_branch"
-
-test_data_path = pooch.retrieve(
-    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_test_data.nc",
-    known_hash="sha256:1234567890abcdef",
+test_data_path = deveraux(branch="main").fetch(  # or "my_development_branch"
+    "my_subfolder/my_test_data.nc"
 )
 
 # If your testing data is `xarray`-readable, you can then use the following:
@@ -32,64 +31,50 @@ import xarray as xr
 ds = xr.open_dataset(test_data_path)
 ```
 
-## Loading data
-
-If you wish to load data from this repository, this can be done with the following procedure:
-
-* To gather a single file (using the `streamflow_BCC-CSM1.1-m_rcp45.nc` file as an example):
+* To download and unzip multiple files stored within a zip archive:
 ```python
+from xhydro.testing.helpers import deveraux
 import pooch
-import xarray as xr
 
-GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
-BRANCH_OR_COMMIT_HASH = "main"
-
-test_data_path = pooch.retrieve(
-    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/streamflow_BCC-CSM1.1-m_rcp45.nc",
-    known_hash="sha256:8699f40153abdea098d580f73b1f8ad64875823f0d8479fdc4f8a40b4adcaf5e",
+files = deveraux().fetch(
+    "my_subfolder/my_test_data.zip",
+    processor=pooch.Unzip(),
 )
-ds = xr.open_dataset(test_data_path)
+
+# Each file within the zip archive will be downloaded to a temporary directory, and the `files` variable will contain a list of the paths to each of these files. Exactly how you open the files depends on the structure of the data.
 ```
 
-* To open multiple files stored within a zip archive (using the `reference.zip` file as an example):
+## Loading data without using xHydro
+
+The above procedure is the recommended way to load data from this repository, but if you wish to load data without using `xHydro`, you can do so with the following procedure:
+
+* To gather a single file:
 ```python
 import pooch
-import xarray as xr
 
 GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
-BRANCH_OR_COMMIT_HASH = "main"
+BRANCH_OR_COMMIT_HASH = "main"  # or "my_development_branch"
+
+test_data_path = pooch.retrieve(
+    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_subfolder/my_test_data.nc",
+    known_hash="sha256:1234567890abcdef",
+)
+```
+
+* To download and unzip multiple files stored within a zip archive:
+```python
+import pooch
+
+GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
+BRANCH_OR_COMMIT_HASH = "main"  # or "my_development_branch"
 
 files = pooch.retrieve(
-    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/reference.zip",
+    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/my_subfolder/my_test_data.zip",
     known_hash="md5:192544f3a081375a81d423e08038d32a",
     processor=pooch.Unzip(),
 )
 
-# Exactly how you open the files depends on the structure of the data. This will work for the reference.zip file:
-ds = xr.open_mfdataset(files, combine="nested", concat_dim="platform")
-```
-
-* You can also simply extract the files to a directory:
-```python
-from pathlib import Path
-from zipfile import ZipFile
-
-import pooch
-
-GITHUB_URL = "https://github.com/hydrologie/xhydro-testdata"
-BRANCH_OR_COMMIT_HASH = "main"
-
-test_data_path = pooch.retrieve(
-    url=f"{GITHUB_URL}/raw/{BRANCH_OR_COMMIT_HASH}/data/cc_indicators/reference.zip",
-    known_hash="sha256:80e21de39a78da49f809ddf35bd2d21271828450ea2da71eac08aab13c7b846e",
-)
-
-directory_to_extract_to = Path(
-    test_data_path
-).parent  # To extract to the same directory as the zip file
-with ZipFile(test_data_path, "r") as zip_ref:
-    zip_ref.extractall(directory_to_extract_to)
-    files = zip_ref.namelist()
+# Each file within the zip archive will be downloaded to a temporary directory, and the `files` variable will contain a list of the paths to each of these files. Exactly how you open the files depends on the structure of the data.
 ```
 
 [//]: # (Code below this line is autogenerated by `report_check_sums.py`)
