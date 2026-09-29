@@ -97,6 +97,7 @@ files = pooch.retrieve(
 | hydro_modelling/ERA5_testdata.nc | 100.9 kiB | sha256:7051f696f30d9772511cfbae81a0be0bd2898f25d123227f5f5fa4869138fa4e |
 | extreme_value_analysis/sea-levels_fremantle.zarr.zip | 5.6 kiB | sha256:af6abf274bf8809eca7fa0d33540979203fa4d9833e13c8e6adf3f4d15966a40 |
 | extreme_value_analysis/rainfall_excedance.zarr.zip | 7.5 kiB | sha256:ce29ea4b4b427bac0c11c0bb1ead4bb961aee2ba88ac0abffc859a155986f232 |
+| extreme_value_analysis/obs_streamflow_15stationsDEH.nc | 404.7 kiB | sha256:18cf7258594def78680ec82506974c9577df7e7aac65eecdb80983b10e91d0f5 |
 | extreme_value_analysis/genpareto.zip | 136.0 kiB | sha256:f6b67160dd1373ad6a9ce511788184a0bbed23e0c297315d1686ecbb88e16e0a |
 | extreme_value_analysis/genextreme.zip | 228.0 kiB | sha256:8d036acca8b9a4608930c97d6cebfbf24205a20c7e43c47dcbdc14221a643b0c |
 | extreme_value_analysis/NOAA_GFDL_ESM4.zip | 88.7 kiB | sha256:483a5ffd398aa60db2d2c6d41857cd02c201a7f9efcacef2610a2521f72a22b6 |
